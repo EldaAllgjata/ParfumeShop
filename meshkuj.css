@@ -1,0 +1,530 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.linqet{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    gap:20vw;
+    align-items: center;
+   justify-content: center;
+   margin-top: 0;
+   padding-top: 0;
+   background-color: #fdd0ec;
+}
+.logo img{
+    width: 100%;
+    height: 6vh;
+}
+
+.link1 a{
+  padding: 1vh 5vw;
+  color: #fffbfd;
+  text-decoration: none;
+  font-size: 20px;
+ animation: shfaqText 3s ease-in forwards;
+  
+  margin: 1vw;
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.link1 a:hover{
+    text-shadow: 4px 4px 8px white;
+}
+.logo{
+    margin-top: 0;
+    padding-left: 7vw;
+    padding-right: 7vw;
+    padding-bottom: 1vh;
+   padding-top: 1vh;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgb(255, 255, 255);
+    position: absolute;
+    top: 0;
+}
+.kerkimi{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    flex-direction: row;
+   
+    align-items: center;
+    gap: 51vw;
+}
+.kerkimi h1{
+    color: #fdd0ec;
+    font-size: 35px;
+    padding-left: 1vw ;
+   
+}
+
+.interactiv{
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    width: 32vw;
+    
+    padding: 10px;
+}
+.cart img{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+.cart div{
+      position: absolute;
+      top: 15%;
+      right: 5.5%;
+      font-size: x-large;
+      background-color: #b31010;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translateX(20px);
+      z-index: 2;  
+}
+.cart a{
+cursor: pointer;
+}
+.box{
+    max-width: 400px;
+    width: 80%;
+    
+  }
+  .box .search-box{
+    position: relative;
+    height: 50px;
+    max-width: 50px;
+    margin-left: auto;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+  }
+  #check:checked ~ .search-box{
+    max-width: 380px;
+  }
+  .search-box input{
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   border-radius: 25px;
+   background: #fff;
+   outline: none;
+   border: none;
+   padding-left: 20px;
+   font-size: 18px;
+  }
+  .search-box .icon{
+    position: absolute;
+    right: -2px;
+    top: 0;
+    width: 50px;
+    background: #FFF;
+    height: 100%;
+    text-align: center;
+    line-height: 50px;
+    color: #FF676D;
+    font-size: 20px;
+    border-radius: 25px;
+  }
+  #check:checked ~ .search-box .icon{
+    background: #FF676D;
+    color: #FFF;
+    width: 60px;
+    border-radius: 0 25px 25px 0;
+  }
+  #check{
+    display: none;
+  }
+  .produktet{
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    flex-wrap: wrap;
+  }
+  .fav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    display: none;
+    gap: 5vw;
+    width: 100%;
+    height: 60vh;
+   /*nuk shfaqet asnje produkt si fillim ose fhaqen ato produkte deri te butoni*/
+}
+.fav div{
+    width: 25%;
+    height: 55vh;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+.top a{
+  width:80%;
+    height: 40vh;
+}
+.top img{
+    width:100%;
+    height: 40vh;
+    border: 2px solid #dc9fc5;
+    border-radius: 15px ;
+    padding: 25px 20px;
+}
+.stilshkrimi{
+    text-align: center;
+    font-size: 30px;
+    color: #d9a7c7;
+    margin-top: 3vh;
+    
+        font-family: "Moon Dance", serif;
+        font-weight: 400;
+        font-style: normal;
+}
+.titull{
+    text-align: center;
+    font-size: 50px;
+    color: #585356;
+    
+    margin-bottom: 7vh;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    
+}
+.emri{
+    font-size: 16px;
+    margin-top: 1vh;
+    max-width: 80%;
+}
+.cmimi{
+    font-size: 21px;
+    margin-top: 1vh;
+}
+.top button{
+    width:80%;
+    height: 5vh;
+    margin-top: 1vh;
+    border: 2px solid #dc9fc5;
+    border-radius: 15px;
+    background-color: #f4d5e9eb;
+}
+.top a{
+    color: white;
+    font-weight: 800;
+    font-size: 17px;
+    text-decoration: none;
+}
+.seksioniFundit{
+  display: flex;
+  flex-direction: row;
+  gap: 70px;
+  background-color: rgb(211, 211, 211);
+}
+.social{
+  display: flex;
+  flex-direction: column;
+  gap:30px;
+  margin-left: 30px;
+  width:30%;
+}
+.social div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.rrjetet p{
+  margin-left: 30px;
+  font-size: 20px;
+  font-family: "Barlow", serif;
+font-weight: 400;
+font-style: normal;
+}
+.social img{
+  width: 50px;
+  height: 50px;
+}
+.social h3{
+  padding-left: 25%;
+  font-size: 30px;
+  margin-bottom: 20px;
+ margin-top: 20px;
+ font-family: "Barlow", serif;
+font-weight: 400;
+font-style: normal;
+}
+.adresa{
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+.adresa p{
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+ margin-top: 20px;
+ font-family: "Barlow", serif;
+font-weight: 400;
+font-style: normal;
+}
+.mesazh{
+  display: flex;
+  flex-direction: column;
+}
+.mesazh textarea{
+  width:70%;
+  margin-left: 15%;
+  margin-top: 4%;
+  margin-bottom: 3%;
+  border: 3px;
+  box-shadow:  5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+.mesazh label{
+  margin-left: 15%;
+  font-size:20px;
+}
+.mesazh button{
+  width: 20%;
+  margin-left: 51%;
+  color: #323131e5;
+  font-weight: 300;
+  border: 1px solid #515151fd;
+  width: 150px;
+  border-radius: 3px;
+  text-align: center;
+  padding: 10px 0;
+}
+.contact{
+
+  width: 30%;
+}
+.contact h3{
+text-align: center;
+font-size: 30px;
+margin-bottom: 20px;
+margin-top: 20px;
+font-family: "Barlow", serif;
+font-weight: 400;
+font-style: normal;  
+}  
+.loadMoreBtn{
+  display: block;
+  margin: auto;
+  height: 50px;
+  padding: 0 50px;
+  border-radius: 6px;
+  background-color:#2980b9 ;
+  color: #f1f1f1;
+  font-size: 16px;
+  cursor: pointer;
+  transition: .3s linear;
+  margin-bottom: 8vh;
+}
+.loadMoreBtn :hover{
+  opacity: .8;
+}
+@media (max-width: 768px){
+  .linqet {
+    flex-direction: row;
+     gap: 40vw;
+     
+ }
+ .link1{
+      display: flex;
+      flex-direction: row;
+      
+ }
+ .link1 a{
+     font-size: 12px; /* Zvogëlon madhësinë e shkronjave */
+     padding: 0;
+     margin: 0;
+     margin: 2vw;
+ }
+
+ .logo img {
+     height: 8vh; /* Zvogëlon madhësinë e logos */
+ }
+
+ .logo {
+     padding-left: 3vw;
+     padding-right: 3vw;
+     padding-top: 1vh;
+     height: 10vh;
+    
+ }
+ .kerkimi {
+ gap: 10vw;
+
+ 
+}
+.interactiv{
+  padding: 0;
+  width: 100%;
+}
+.box{
+  width: 93%;
+}
+/*deri ketu*/
+.produktet {
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.fav {
+  flex-direction: row;
+  gap: 3vw;
+  height: 50vh;
+}
+
+.top a{
+  width:100%;
+  height: 25vh;
+  
+}
+.top img{
+    width:100%;
+    height: 20vh;
+    padding: 15px 10px;
+}
+
+.top button {
+  width: 100%;
+
+}
+/*deri ketu*/
+.seksioniFundit {
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.adresa iframe {
+  width: 100%;
+  height: 20vh;
+}
+
+.search-box input {
+  padding-left: 15px;
+}
+}
+
+/* Stil për ekrane shumë të vogla */
+@media (max-width: 480px) {
+
+.kerkimi h1 {
+  font-size: 28px;
+}
+
+.titull {
+  font-size: 36px;
+}
+.top a{
+  height: 20vh;
+}
+
+
+.top p {
+  font-size: 14px;
+  text-align: center;
+}
+.emri{
+  height: 10vh;
+}
+.cmimi{
+  height: 3vh;
+}
+.top button a{
+  font-size: 10px;
+}
+.fav div{
+  height: 45vh;
+}
+.fav{
+  height: 45vh;
+}
+.seksioniFundit{
+  display: flex;
+  flex-direction: column;
+ 
+}
+.social{
+  display: flex;
+  flex-direction: column;
+  gap:30px;
+  
+  width:100%;
+}
+.social div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.rrjetet p{
+  margin-left: 30px;
+  font-size: 12px;
+  
+}
+.social img{
+  width: 30px;
+  height: 30px;
+}
+.social h3{
+  width: 100%;
+  padding-left: 20vw;
+  font-size: 20px;
+  margin-bottom: 10px;
+ margin-top: 10px;
+  
+}
+.adresa{
+  margin: 0;
+}
+.adresa p{
+  font-size: 20px;
+}
+.social{
+  gap: 10px;
+  margin: 0;
+}
+.mesazh{
+  display: flex;
+  flex-direction: column;
+}
+.mesazh textarea{
+  width:70%;
+  height: 20vh;
+}
+.mesazh label{
+
+  font-size:15px;
+}
+
+.contact{
+
+  width: 100%;
+}
+.contact h3{
+  width: 100%;
+text-align: center;
+font-size: 20px;
+margin-bottom: 10px;
+margin-top: 10px;
+  
+}  
+
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagesa</title>
+    <link rel="stylesheet" href="paga.css">
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <div class="row">
+                <div class="column">
+                   <h3 class="title">Billing Addres</h3>
+                   <div class="input-box">
+                      <span>Full name</span>
+                      <input type="text" id="fullName" placeholder="Ben Aiden">
+
+                   </div>
+                   <div class="input-box">
+                    <span>Email:</span>
+                    <input type="email" id="email" placeholder="benaiden@gmail.com">
+
+                 </div>
+                 <div class="input-box">
+                    <span>Adresa:</span>
+                    <input type="text" id="address" placeholder="dhoma-rruga-qyteti">
+
+                 </div>
+                 <div class="input-box">
+                    <span>Qyteti:</span>
+                    <input type="text" id="city" placeholder="Tirane">
+
+                 </div>
+                 <div class="flex">
+                    <div class="input-box">
+                        <span>Shteti</span>
+                        <input type="text" id="country" placeholder="Shqiperi">
+  
+                     </div>
+                     <div class="input-box">
+                        <span>Zip Code</span>
+                        <input type="number" id="zipCode" placeholder="123 456">
+  
+                     </div>
+                 </div>
+
+                </div>
+
+
+                
+                    <div class="column">
+                        <h3 class="title">Pagesa</h3>
+                
+                        <!-- Zgjedhja Z. ose Znj. -->
+                        <div class="input-box">
+                            <span>Kartat qe pranohen:</span>
+                            <img src="cards.png" alt="">
+                            
+                        </div>
+                
+                        <div class="input-box">
+                            <span>Numri i kartës:</span>
+                            <input type="number"  id="cardNumber" placeholder="1111 2222 3333 4444">
+                        </div>
+                
+                        <div class="input-box">
+                            <span>Emri produktit:</span>
+                            <input type="text" id="productName" readonly>
+                        </div>
+                
+                        <div class="input-box">
+                            <span>Çmimi për njësi:</span>
+                            <input type="text" id="unitPrice" readonly>
+                        </div>
+                
+                        <div class="input-box">
+                            <span>Sasia:</span>
+                            <input type="number" id="quantity" value="1" min="1">
+                            <p class="error-msg" id="stockMessage"></p>
+                        </div>
+                
+                        <div class="flex">
+                            <div class="input-box">
+                                <span>Shuma totale:</span>
+                                <input type="text" id="totalPrice" readonly>
+                            </div>
+                            
+                        </div>
+                
+                        
+                    </div>
+                
+                </div>
+                <button onclick="confirmPurchase()" class="btn">Kryej Blerjen</button>
+                </form>
+            </div>
+           
+                    <script>
+                        // Merr të dhënat nga localStorage (faqja me produktet)
+                        const productName = localStorage.getItem("productName") || "Pa Emër";
+                        const productPriceString = localStorage.getItem("productPrice") || "$0"; // Merr të dhënën e ruajtur ose një vlerë fallback.
+                        const productPrice = parseFloat(productPriceString.replace(/[^0-9.-]+/g, "")) || 0; // Hiq simbolin "$" dhe konverto në numër.
+
+                        
+
+                        const stock = parseInt(localStorage.getItem("productStock")) || 10; // Sasia në stok
+                          
+                        // Vendos të dhënat në inpute
+                        document.getElementById("productName").value = productName;
+                        document.getElementById("unitPrice").value = productPrice + " ALL";
+                        document.getElementById("totalPrice").value = productPrice + " ALL";
+                
+                        // Kur përdoruesi ndryshon sasinë
+                        document.getElementById("quantity").addEventListener("input", function() {
+                            let qty = parseInt(this.value);
+                            let stockMessage = document.getElementById("stockMessage");
+                
+                            if (qty > stock) {
+                                stockMessage.style.display = "block";
+                                stockMessage.innerText = "Nuk ka aq produkte në gjendje! (Disponueshmëria: " + stock + ")";
+                                this.value = stock;
+                            } else {
+                                stockMessage.style.display = "none";
+                            }
+                
+                            // Përditëson shumën
+                            document.getElementById("totalPrice").value = (qty * productPrice) + " ALL";
+                        });
+                
+                        function confirmPurchase() {
+    // Merr të dhënat nga inputet
+    var fullName = document.getElementById("fullName").value;
+    var email = document.getElementById("email").value;
+    var address = document.getElementById("address").value;
+    var city = document.getElementById("city").value;
+    var country = document.getElementById("country").value;
+    var zipCode = document.getElementById("zipCode").value;
+    var cardNumber = document.getElementById("cardNumber").value;
+    var quantity = document.getElementById("quantity").value;
+
+    // Kontrolloni nëse të gjitha fushat janë plotësuar
+    if (fullName === "" || email === "" || address === "" || city === "" || country === "" || zipCode === "" || cardNumber === "" || quantity === "") {
+        alert("Ju lutem plotësoni të gjitha fushat.");
+        
+    }
+
+    // Kontrolloni formatin e email-it
+    var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    if (!emailPattern.test(email)) {
+        alert("Ju lutem vendosni një email të vlefshëm.");
+        
+    }
+
+    // Kontrolloni formatin e numrit të kartës
+    var cardPattern = /^[0-9]{16}$/; // Duhet të ketë 16 shifra
+    if (!cardPattern.test(cardNumber)) {
+        alert("Numri i kartës duhet të ketë 16 shifra.");
+       
+    }
+
+    // Kontrolloni që sasia është një numër pozitiv
+    if (quantity <= 0) {
+        alert("Sasia duhet të jetë më e madhe se 0.");
+        
+    }
+
+    // Nëse gjithçka është në rregull, shfaq mesazhin e konfirmimit
+    alert("Blerja u krye me sukses!");
+}
+
+                    </script>
+                </body>
+                </html>
+                
+ 
+</body>
+</html>

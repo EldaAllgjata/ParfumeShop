@@ -1,0 +1,288 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.linqet{
+    width: 100%;
+    min-height: 10vh;
+    display: flex;
+    flex-direction: row;
+    gap:20vw;
+    align-items: center;
+   justify-content: center;
+   margin-top: 0;
+   padding-top: 0;
+   background-color: #fdd0ec;
+   
+}
+.logo img{
+    width: 100%;
+    max-height: 7vh;
+}
+
+.link1 a{
+  padding: 1vh 5vw;
+  color: #fffbfd;
+  text-decoration: none;
+  font-size: 20px;
+ animation: shfaqText 3s ease-in forwards;
+  
+  margin: 1vw;
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.link1 a:hover{
+    text-shadow: 4px 4px 8px white;
+}
+
+.logo{
+    margin-top: 0;
+    padding-left: 7vw;
+    padding-right: 7vw;
+    padding-bottom: 1vh;
+   padding-top: 1vh;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgb(255, 255, 255);
+    position: absolute;
+    top: 0;
+}
+.content{
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.content img{
+    width: 40%;
+     
+}
+.shkrimi{
+    width: 60%;
+}
+.emriParfumit{
+    text-align: start;
+    font-size: 55px;
+    color: #585356;
+    margin-top:10vh ;
+    margin-bottom: 5vh;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    
+}
+.cmimi{
+font-size: 28px;
+font-weight: 600;
+
+margin-bottom: 3vh;
+}
+.pershkrimiParfumit{
+    font-size: 20px;
+    color: #585356;
+    margin-bottom: 3vh;
+    padding-right: 5vw;
+}
+.pershkrim{
+    font-weight: 600;
+    color: black;
+}
+.vellimi{
+    display: flex;
+    flex-direction: row;
+    gap: 3vw;
+    font-size: 18px;
+    margin-bottom: 5vh;
+}
+.vellimi h3{
+    font-weight: 600;
+}
+.dy{
+ border: 1px solid black;
+padding: 2px 3px;
+
+}
+.shkrimi button{
+    width:20%;
+    height: 7vh;
+    margin-top: 1vh;
+   border: transparent;
+    border-radius: 15px;
+    background-color: #ecba4eeb;
+    margin-bottom: 12vh;
+}
+.shkrimi a{
+    color: white;
+    font-weight: 600;
+    font-size: 17px;
+    text-decoration: none;
+}
+.elementet {
+    display: flex;
+    flex-wrap: wrap;/*mundeson vendosjen e elementeve ne rreshta dhe kolona kur nuk ka hapesire te mjaftueshme,nuk e kalojne hapesiren e disponueshme*/
+    justify-content: start;/*elementet ne qender me hapesire te njejte ne te dyja anet e kontejnerit*/
+    align-items: center;
+    gap: 10px;
+    }
+    
+    .elementetSherbimit {
+    max-width: 200px;
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;/*i vendos elementet ne fillim te kontejnerit*/
+    align-items: center;
+    gap: 3px;
+    
+    min-height: 10vh;
+    }
+    
+    .ikona { 
+        
+        width: 45px; }
+    
+    .ikona img { margin-inline: auto; /*i pozicionon ikona ne qender te elementit*/
+    width: 45px;
+    height: 45px;
+    }
+    
+    .emri {
+      color: #1b1b1b;       
+      font-size: 16px;    
+      font-weight: 600;
+    
+      margin-bottom: 7px;
+    }
+    .pershkrimi{
+      font-size: 12px;
+      
+   margin-top: 0;
+    }
+    .permbatja{
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        justify-content: center;
+        
+        height: 65%;
+        
+        
+    }
+    .sherbimet{
+        border-bottom: 1px solid black;
+        border-top: 1px solid black;
+    }
+    @media (max-width: 768px) {
+        .content {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    
+        .content img {
+            width: 80%; /* Redukton madhësinë e imazhit në mobile */
+            max-height: auto;
+        }
+    
+        .shkrimi {
+            width: 90%; /* Teksti më i përshtatshëm në mobile */
+            padding: 0 2vw;
+        }
+    
+        .emriParfumit {
+            font-size: 36px; /* Tekst më i vogël për mobile */
+            margin-top: 5vh;
+        }
+    
+        .cmimi {
+            font-size: 22px;
+            text-align: left;
+        }
+    
+        .pershkrimiParfumit {
+           text-align: left;
+           
+        }
+    
+        .vellimi {
+            flex-direction: row;
+            align-items: flex-start;
+            
+        }
+    
+        .shkrimi button {
+            width: 100%;
+            height: 7vh;
+        }
+        .linqet {
+           flex-direction: row;
+            gap: 40vw;
+            
+        }
+        .link1{
+             display: flex;
+             flex-direction: row;
+             
+        }
+        .link1 a{
+            font-size: 12px; /* Zvogëlon madhësinë e shkronjave */
+            padding: 0;
+            margin: 0;
+            margin: 2vw;
+        }
+    
+        .logo img {
+            height: 8vh; /* Zvogëlon madhësinë e logos */
+        }
+    
+        .logo {
+            padding-left: 3vw;
+            padding-right: 3vw;
+            padding-top: 1vh;
+            height: 10vh;
+           
+        }
+    
+        .elementet {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .elementetSherbimit {
+            justify-content: flex-start;
+        }
+    
+        .ikona img {
+            width: 40px;
+            height: 40px;
+        }
+        .permbatja{
+            text-align: start;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .emriParfumit {
+            font-size: 28px;
+        }
+    
+        .cmimi {
+            font-size: 18px;
+        }
+    
+        .pershkrimiParfumit {
+            font-size: 16px;
+        }
+    
+        .shkrimi button {
+            height: 6vh;
+        }
+     
+    }
+    

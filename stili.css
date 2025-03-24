@@ -1,0 +1,741 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background: #d9a7c7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #fffcdc, #d9a7c7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #fffcdc, #d9a7c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 100%;
+    height: 100vh;
+  
+}
+.linqet{
+    width: 100%;
+    height: 10vh;
+}
+.faqjapare{
+    position: relative;
+    overflow: hidden; /* Që trekëndeshat të mos dalin jashtë */
+    display: flex;
+  align-items: end;
+    
+    width: 100%;
+    height: 91vh;
+}
+.trekendeshat{
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+}
+.trekendeshat img{
+width: 100%;
+height: 89vh;
+animation: zmadhoFoto 2s ease-in-out forwards;
+}
+.fotoback{
+    position: relative;
+    z-index: 2;
+    animation: zvogeloFoto 2s ease-in-out forwards;
+}
+.fotoback img{
+    width: 132%;
+    height: 91vh;
+}
+.linqet{
+    display: flex;
+    flex-direction: row;
+    gap:20vw;
+    align-items: center;
+   justify-content: center;
+   margin-top: 0;
+   padding-top: 0;
+}
+.logo img{
+    width: 100%;
+    height: 6vh;
+}
+
+.link1 a{
+  padding: 1vh 5vw;
+  color: #fef7fb;
+  text-decoration: none;
+  font-size: 20px;
+ animation: shfaqText 3s ease-in forwards;
+  
+  margin: 1vw;
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.link1 a:hover{
+    text-shadow: 4px 4px 8px white;
+}
+.logo{
+    margin-top: 0;
+    padding-left: 7vw;
+    padding-right: 7vw;
+    padding-bottom: 1vh;
+   padding-top: 1vh;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgb(255, 255, 255);
+    position: absolute;
+    top: 0;
+}
+.shkrimet{
+    position: absolute;
+    top: 22%;
+    left: 4%;
+    width: 40vw;
+    text-align: start;
+    color: white;
+    z-index: 3; /* Që të jetë mbi gjithçka */
+   
+    display: flex;
+    flex-direction: column;
+    
+}
+.shkrimet h1{
+    font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 65px;
+  color: #de89bd;
+  animation: shkrimKryesor 2s ease-in forwards;
+}
+.shkrimet p{
+font-size: 26px;
+padding-bottom: 10px;
+border-top: 2px solid white;
+text-shadow: 2px 2px 4px rgb(226, 178, 228);
+width: 35vw;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  animation: shfaqText 2s ease-in forwards;
+}
+
+@keyframes zvogeloFoto {
+    0% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes shfaqText {
+    from {
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes zmadhoFoto {
+    from {
+        transform: scale(0.7);
+        opacity: 1;
+    } 
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes shkrimKryesor {
+    from {
+        
+        opacity: 0;
+    }
+    to {
+     
+        opacity: 1;
+    }
+}
+.about{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10vw;
+    background-color: #feddf2;
+}
+.about img{
+    width: 36%;
+    height: 60vh;
+    margin-top:20vh ;
+    margin-left: 7vw;
+    border: 1px solid rgb(250, 104, 255);
+    border-top-left-radius: 300px;
+    border-top-right-radius: 300px;
+    box-shadow: 0px 0px 20px rgb(206, 151, 200);
+}
+.about div{
+    width: 50%;
+    height: 80vh;
+    margin-top: 16vh;
+    margin-right: 7vw;
+    
+
+}
+.pershkrim{
+    padding:2vh 2vw;
+}
+.pershkrim h1{
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 65px;
+  color: #e882c1;
+  padding-bottom: 3vh;
+  padding-left: 7vw;
+}
+.pershkrim p{
+    text-align: right;
+    font-size: 23px;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.theks span{
+    font-weight: 550;
+}
+.kategorite{
+    display: flex;
+    flex-direction: row;
+    gap:7%;
+    width: 100%;
+    height: 100vh;
+    
+}
+.femra{
+    width: 40%;
+    height: 80vh;
+    margin-top: 10vh;
+    
+    margin-left: 5vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    align-items: center;
+    
+    box-shadow: 0 0 20px grey;
+}
+.femra img{
+    width:60%;
+    height: 60vh;
+    box-shadow: 5px 5px 10px grey;
+}
+.femra h1{
+    font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 55px;
+  color: #7f7f7f;
+}
+.femra button{
+    position: relative;
+    left: 1%;
+
+    bottom: 70px;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 5px;
+    border-width: 3px;
+    border-color:rgb(103, 101, 103) ;
+    box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.2);
+    background-color: aliceblue;
+}
+.femra button:hover{
+    box-shadow: 0px 0px 10px white;
+    transform: scale(1.1);
+}
+.femra a{
+    text-decoration: none;
+    color:rgb(90, 89, 89) ;
+    font-weight: 600;
+}
+.seksioni1{ padding-block: 45px;
+
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    padding-top:70px;
+    padding-bottom: 40px;
+    background-color: #feddf2;
+}
+
+.elementet {
+display: flex;
+flex-wrap: wrap;/*mundeson vendosjen e elementeve ne rreshta dhe kolona kur nuk ka hapesire te mjaftueshme,nuk e kalojne hapesiren e disponueshme*/
+justify-content: center;/*elementet ne qender me hapesire te njejte ne te dyja anet e kontejnerit*/
+align-items: center;
+gap: 40px;
+}
+
+.elementetSherbimit {
+max-width: 235px;
+width: 100%;
+display: flex;
+justify-content: flex-start;/*i vendos elementet ne fillim te kontejnerit*/
+align-items: center;
+gap: 20px;
+}
+
+.ikona { width: 45px; }
+
+.ikona img { margin-inline: auto; /*i pozicionon ikona ne qender te elementit*/
+width: 45px;
+height: 45px;
+left: 5px;}
+
+.emri {
+  color: #1b1b1b;       
+  font-size: 16px;    
+  font-weight: 600;
+}
+.pershkrimi{
+  font-size: 12px;
+}
+.fav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5vw;
+    width: 100%;
+    height: 60vh;
+    
+}
+.fav div{
+    width: 25%;
+    height: 55vh;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+.top img{
+    width:100%;
+    height: 40vh;
+    border: 2px solid #dc9fc5;
+    border-radius: 15px ;
+    padding: 25px 20px;
+}
+.stilshkrimi{
+    text-align: center;
+    font-size: 30px;
+    color: #d9a7c7;
+    margin-top: 3vh;
+    
+        font-family: "Moon Dance", serif;
+        font-weight: 400;
+        font-style: normal;
+}
+.titull{
+    text-align: center;
+    font-size: 50px;
+    color: #585356;
+    
+    margin-bottom: 3vh;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+.emri{
+    font-size: 16px;
+    margin-top: 1vh;
+}
+.cmimi{
+    font-size: 21px;
+    margin-top: 1vh;
+}
+.top button{
+    width:80%;
+    height: 5vh;
+    margin-top: 1vh;
+    border: 2px solid #dc9fc5;
+    border-radius: 15px;
+    background-color: #f4d5e9eb;
+}
+.top a{
+    color: white;
+    font-weight: 800;
+    font-size: 17px;
+    text-decoration: none;
+}
+.seksioniFundit{
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    background-color: rgb(211, 211, 211);
+}
+.social{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    margin-left: 30px;
+    width:30%;
+}
+.social div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.rrjetet p{
+    margin-left: 30px;
+    font-size: 20px;
+    font-family: "Barlow", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.social img{
+    width: 50px;
+    height: 50px;
+}
+.social h3{
+    padding-left: 25%;
+    font-size: 30px;
+    margin-bottom: 20px;
+   margin-top: 20px;
+   font-family: "Barlow", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.adresa{
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+.adresa p{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+   margin-top: 20px;
+   font-family: "Barlow", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.mesazh{
+    display: flex;
+    flex-direction: column;
+}
+.mesazh textarea{
+    width:70%;
+    margin-left: 15%;
+    margin-top: 4%;
+    margin-bottom: 3%;
+    border: 3px;
+    box-shadow:  5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+.mesazh label{
+    margin-left: 15%;
+    font-size:20px;
+}
+.mesazh button{
+    width: 20%;
+    margin-left: 51%;
+    color: #323131e5;
+    font-weight: 300;
+    border: 1px solid #515151fd;
+    width: 150px;
+    border-radius: 3px;
+    text-align: center;
+    padding: 10px 0;
+}
+.contact{
+
+    width: 30%;
+}
+.contact h3{
+ text-align: center;
+ font-size: 30px;
+ margin-bottom: 20px;
+ margin-top: 20px;
+ font-family: "Barlow", serif;
+font-weight: 400;
+font-style: normal;  
+}  
+@media(max-width:768px){
+    .linqet {
+        flex-direction: row;
+         gap: 40vw;
+         
+     }
+     .link1{
+          display: flex;
+          flex-direction: row;
+          
+     }
+     .link1 a{
+         font-size: 12px; /* Zvogëlon madhësinë e shkronjave */
+         padding: 0;
+         margin: 0;
+         margin: 2vw;
+     }
+     
+     .logo img {
+         height: 8vh; /* Zvogëlon madhësinë e logos */
+     }
+    
+     .logo {
+         padding-left: 3vw;
+         padding-right: 3vw;
+         padding-top: 1vh;
+         height: 10vh;
+        
+     }
+     .fotoback img{
+        width: 100%;
+     }
+     .shkrimet{
+        top: 35%;
+     }
+     .shkrimet h1{
+        font-size: 25px;
+     }
+     .shkrimet p{
+        font-size: 17px;
+        }
+        .about{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5vh;
+        }
+        .about img{
+            width: 50%;
+            height: 30vh;
+            margin-top: 12vh;
+            margin-left: 0;
+        }
+        .about div{
+            width: 100%;
+            height: 80vh;
+            margin: 0;
+        }
+        .pershkrim{
+            margin: 0;
+            width: 100%;
+        }
+        .pershkrim h1{
+          font-size: 45px;
+          padding-left: 17vw;
+        }
+        .pershkrim p{
+            text-align: center;
+            font-size: 17px;
+            
+        }
+        .kategorite{
+            display: flex;
+            flex-direction: column;
+            gap:5vh;
+            width: 100%;
+            height: 90vh;
+            margin-top: 7vh;
+            
+        }
+        .femra{
+            width: 90%;
+            height: 40vh;
+            margin-left: 5vw;
+            margin-top: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 2vh;
+            align-items: center;
+            
+            box-shadow: 0 0 20px grey;
+        }
+        .femra img{
+            width:60%;
+            height: 25vh;
+            box-shadow: 5px 5px 10px grey;
+        }
+        .femra h1{
+          font-size: 45px;
+          color: #7f7f7f;
+        }
+        .femra button{
+            position: relative;
+            left: 1%;
+        
+            bottom: 70px;
+            font-size: 20px;
+            padding: 10px 25px;
+            border-radius: 5px;
+            border-width: 3px;
+            border-color:rgb(103, 101, 103) ;
+            box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.2);
+            background-color: aliceblue;
+        }
+        .femra button:hover{
+            box-shadow: 0px 0px 10px white;
+            transform: scale(1.1);
+        }
+        .femra a{
+            text-decoration: none;
+            color:rgb(90, 89, 89) ;
+            font-weight: 600;
+        }        
+
+
+    .fav {
+        flex-direction: row;
+        gap: 3vw;
+        height: 50vh;
+      }
+      
+      .top a{
+        width:100%;
+        height: 25vh;
+        
+      }
+      .top img{
+          width:100%;
+          height: 20vh;
+          padding: 15px 10px;
+      }
+      
+      .top button {
+        width: 100%;
+      
+      }
+    .seksioniFundit {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+      }
+      
+      .adresa iframe {
+        width: 100%;
+        height: 20vh;
+      }
+      
+      .search-box input {
+        padding-left: 15px;
+      }
+
+}
+@media(max-width:480px){
+    .top a{
+        height: 20vh;
+      }
+      .top p {
+        font-size: 14px;
+        text-align: center;
+      }
+      .emri{
+        height: 10vh;
+      }
+      .cmimi{
+        height: 3vh;
+      }
+      .top button a{
+        font-size: 10px;
+      }
+      .fav div{
+        height: 45vh;
+      }
+      .fav{
+        height: 45vh;
+      }
+
+      .seksioni1{
+        padding-top:40px;
+    }
+    
+    .elementet {
+    gap: 20px;
+    }
+    .emri {
+      height: 3vh;
+      margin:0;
+    }
+    .seksioniFundit{
+        display: flex;
+        flex-direction: column;
+       
+      }
+      .social{
+        display: flex;
+        flex-direction: column;
+        gap:30px;
+        
+        width:100%;
+      }
+      .social div{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      .rrjetet p{
+        margin-left: 30px;
+        font-size: 12px;
+        
+      }
+      .social img{
+        width: 30px;
+        height: 30px;
+      }
+      .social h3{
+        width: 100%;
+        padding-left: 20vw;
+        font-size: 20px;
+        margin-bottom: 10px;
+       margin-top: 10px;
+        
+      }
+      .adresa{
+        margin: 0;
+      }
+      .adresa p{
+        font-size: 20px;
+      }
+      .social{
+        gap: 10px;
+        margin: 0;
+      }
+      .mesazh{
+        display: flex;
+        flex-direction: column;
+      }
+      .mesazh textarea{
+        width:70%;
+        height: 20vh;
+      }
+      .mesazh label{
+      
+        font-size:15px;
+      }
+      
+      .contact{
+      
+        width: 100%;
+      }
+      .contact h3{
+        width: 100%;
+      text-align: center;
+      font-size: 20px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+        
+      }  
+      
+}
