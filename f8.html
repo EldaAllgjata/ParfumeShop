@@ -15,7 +15,7 @@
         <a href="meshkuj.html" class="borderi">Per meshkuj</a>
         </nav>
         <div class="logo">
-            <img src="C:\Users\C.S.T\Desktop\parfume\Untitled__5_-removebg-preview.png" alt="logo">
+            <img src="Untitled__5_-removebg-preview.png" alt="logo">
         </div>
         <nav class="link1">
             <a href="index.html" class="border2">Home</a>
@@ -24,16 +24,16 @@
     </section>
     <section class="content">
      
-        <img src="C:\Users\C.S.T\Desktop\parfume\Screenshot_2025-02-24_235143-removebg-preview.png" alt="parfumipare">
+        <img src="Screenshot_2025-02-24_235243-removebg-preview.png" alt="parfumipare">
         <div class="shkrimi">
-            <h1 class="emriParfumit">Yves Saint Laurent Black Opium Eau de Parfum/h1>
+            <h1 class="emriParfumit">Yves Saint Laurent Black Opium Eau de Parfum</h1>
             <p class="cmimi">$160</p>
             <p class="pershkrimiParfumit"><span class="pershkrim">Pershkrimi:</span>Një aromë magjepsëse dhe energjike, ku kafja e zezë e fuqishme takohet me notat e ëmbla të vaniljes dhe luleve të bardha, duke krijuar një atmosferë misterioze dhe të parezistueshme.</p>
             <div class="vellimi">
             <h3 >Vellimi:</h3>
             <p class="dy">100ml</p>
             </div>
-            <button><a href="">Porosit tani</a></button>
+            <button onclick="buyProduct('Yves Saint Laurent Black Opium Eau de Parfum', 160)"><a href="blerja.html">Porosit tani</a></button>
             <div class="sherbimet">
                 <div class="sherbimi"><!--container-->
                     <ul class="elementet"><!--service list-->
@@ -79,4 +79,13 @@
             </div>
         </div>
     </section>
+          <script>
+      function buyProduct(name, price) {
+    localStorage.setItem("productName", name);
+    localStorage.setItem("productPrice", price);
+   
+    window.location.href = "blerja.html";
+}
+
+    </script>
     </body>
