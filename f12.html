@@ -15,7 +15,7 @@
         <a href="meshkuj.html" class="borderi">Per meshkuj</a>
         </nav>
         <div class="logo">
-            <img src="C:\Users\C.S.T\Desktop\parfume\Untitled__5_-removebg-preview.png" alt="logo">
+            <img src="Untitled__5_-removebg-preview.png" alt="logo">
         </div>
         <nav class="link1">
             <a href="index.html" class="border2">Home</a>
@@ -24,7 +24,7 @@
     </section>
     <section class="content">
      
-        <img src="C:\Users\C.S.T\Desktop\parfume\Screenshot_2025-02-24_235012-removebg-preview.png" alt="parfumipare">
+        <img src="Screenshot_2025-02-24_235012-removebg-preview.png" alt="parfumipare">
         <div class="shkrimi">
             <h1 class="emriParfumit">Initio Parfums Prives Atomic Rose Eau de Parfum Spray</h1>
             <p class="cmimi">$265</p>
@@ -33,7 +33,7 @@
             <h3 >Vellimi:</h3>
             <p class="dy">100ml</p>
             </div>
-            <button><a href="blerja.html">Porosit tani</a></button>
+          <button onclick="buyProduct('Initio Parfums Prives Atomic Rose Eau de Parfum Spray', 265)"><a href="blerja.html">Porosit tani</a></button>
             <div class="sherbimet">
                 <div class="sherbimi"><!--container-->
                     <ul class="elementet"><!--service list-->
@@ -79,4 +79,13 @@
             </div>
         </div>
     </section>
+         <script>
+      function buyProduct(name, price) {
+    localStorage.setItem("productName", name);
+    localStorage.setItem("productPrice", price);
+   
+    window.location.href = "blerja.html";
+}
+
+    </script>
     </body>
